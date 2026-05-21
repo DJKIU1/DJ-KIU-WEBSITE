@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+  .hidden-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #996515 100%); }
+  .neon-gradient { background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%); }
+  .border-gold { border-color: #D4AF37; border-opacity: 1; }
+  .border-neon { border-color: #A855F7; border-opacity: 1; }
+  .text-gold { color: #D4AF37; }
+  .text-neon { color: #A855F7; }
+  .glow-gold:hover { box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+  .glow-neon:hover { box-shadow: 0 0 15px rgba(168, 85, 247, 0.4); }
+}
+
+@keyframes club-sweep-1 {
+  0% { transform: translate(-20%, -20%) scale(1) rotate(0deg); opacity: 0.2; }
+  33% { transform: translate(30%, 40%) scale(1.4) rotate(120deg); opacity: 0.4; filter: hue-rotate(45deg); }
+  66% { transform: translate(-40%, 20%) scale(0.8) rotate(240deg); opacity: 0.15; }
+  100% { transform: translate(-20%, -20%) scale(1) rotate(360deg); opacity: 0.2; }
+}
+
+@keyframes club-sweep-2 {
+  0% { transform: translate(20%, 40%) scale(1.2) rotate(360deg); opacity: 0.15; }
+  50% { transform: translate(-30%, -20%) scale(0.7) rotate(180deg); opacity: 0.35; filter: hue-rotate(-90deg); }
+  100% { transform: translate(20%, 40%) scale(1.2) rotate(0deg); opacity: 0.15; }
+}
+
+@keyframes club-sweep-3 {
+  0% { transform: translate(30%, -30%) scale(0.8) rotate(180deg); opacity: 0.1; }
+  50% { transform: translate(-20%, 30%) scale(1.3) rotate(0deg); opacity: 0.3; filter: hue-rotate(180deg); }
+  100% { transform: translate(30%, -30%) scale(0.8) rotate(360deg); opacity: 0.1; }
+}
+
+@keyframes laser-sweep {
+  0% { transform: rotate(-35deg) scaleX(0.8); opacity: 0; }
+  50% { opacity: 0.4; }
+  100% { transform: rotate(35deg) scaleX(1.2); opacity: 0; }
+}
+
+.animate-sweep-1 {
+  animation: club-sweep-1 15s infinite ease-in-out;
+}
+
+.animate-sweep-2 {
+  animation: club-sweep-2 18s infinite ease-in-out;
+}
+
+.animate-sweep-3 {
+  animation: club-sweep-3 12s infinite ease-in-out;
+}
+
+.animate-laser {
+  animation: laser-sweep 4s infinite linear;
+}
