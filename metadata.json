@@ -1,0 +1,6 @@
+{
+  "name": "DJ Kiu",
+  "description": "Sitio web oficial de DJ Kiu en Hermosillo, Sonora. Servicios de DJ de alto nivel y show interactivo de Batucada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
